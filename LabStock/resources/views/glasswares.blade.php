@@ -6,10 +6,12 @@
     <title>LabStock</title>
 </head>
 <body>
+    <a href="{{ route ('index') }}">Voltar</a>
     <h1>VIDRARIAS</h1>
+    <a href="{{ route('glasswares.create') }}">Adicionar vidraria</a>
     <ul>
-        @foreach ($glasswares as $Glassware)
-            <li>{{ $Glassware -> name }}</li>
+        @foreach ($glasswares as $glassware)
+            <li>{{ $glassware -> name }} | <a href="{{ route ('glasswares.edit', ['glassware' => $glassware->id]) }}">Editar</a> | <a href="">Excluir</a> </li>
         @endforeach
         
     </ul>
