@@ -18,7 +18,7 @@ class GlasswareController extends Controller
      */
     public function create()
     {
-        //
+        return view('glassware_create');
     }
 
     /**
@@ -40,9 +40,9 @@ class GlasswareController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Glasswares $glassware)
     {
-        //
+        return view('glassware_edit', ['glassware' => $glassware]);
     }
 
     /**
@@ -50,7 +50,14 @@ class GlasswareController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        $updated = Glasswares::where('id', $id)->update($request->except(['_token','_method']));
+
+        if ($updated) {
+            return redirect()->back()->with('message', 'Atualização feita com sucesso!');
+        }
+
+        return redirect()->back()->with('message', 'Erro ao atualizar...');
     }
 
     /**
