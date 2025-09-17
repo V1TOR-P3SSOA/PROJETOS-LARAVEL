@@ -19,4 +19,4 @@ Route::get('/glasswares/{glassware}/edit', [GlasswareController::class, 'edit'])
 
 Route::put('/glasswares/{glassware}', [GlasswareController::class, 'update'])->name('glasswares.update');
 
-Route::get('/glasswares/{glassware}', [GlasswareController::class, 'destroy'])->name('glasswares.destroy');
+Route::delete('/glasswares/{glassware}', [GlasswareController::class, 'destroy'])->name('glasswares.destroy');
