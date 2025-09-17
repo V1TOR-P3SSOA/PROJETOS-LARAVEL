@@ -11,7 +11,9 @@
     <a href="{{ route('glasswares.create') }}">Adicionar vidraria</a>
     <ul>
         @foreach ($glasswares as $glassware)
-            <li>{{ $glassware -> name }} | <a href="{{ route ('glasswares.edit', ['glassware' => $glassware->id]) }}">Editar</a> | <a href="">Excluir</a> </li>
+
+            <li>{{ $glassware -> name }} | <a href="{{ route ('glasswares.edit', ['glassware' => $glassware->id]) }}">Editar</a> | <a href="{{ route('glasswares.show', ['glassware' => $glassware->id]) }}">Informções</a></li>
+
         @endforeach
         
     </ul>
