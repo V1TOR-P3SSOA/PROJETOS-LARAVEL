@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Glassware;
 use Illuminate\Http\Request;
 
 class GlasswareController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        return view('index');
+        $glasswares = Glassware::all();
+        return view('index', compact("glasswares"));
     }
 
     /**
