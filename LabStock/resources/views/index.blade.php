@@ -14,13 +14,17 @@
         <tr>
             <td>NOME</td>
             <td>LOTE</td>
+            <td>QUANTIDADE</td>
             <td>AÇÕES</td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        @foreach ($glasswares as $glassware)
+            <tr>
+                <td>{{ $glassware -> name }}</td>
+                <td>{{ $glassware -> batch }}</td>
+                <td>{{ $glassware -> quantity }}</td>
+                <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
+            </tr>
+        @endforeach
     </table>
 </body>
 </html>
