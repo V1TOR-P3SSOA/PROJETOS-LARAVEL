@@ -19,7 +19,7 @@ class GlasswareController extends Controller
      */
     public function create()
     {
-        //
+        return view('glasswares.create');
     }
 
     /**
