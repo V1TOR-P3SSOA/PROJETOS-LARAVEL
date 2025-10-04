@@ -11,7 +11,7 @@ class GlasswareController extends Controller
     public function index()
     {
         $glasswares = Glassware::all();
-        return view('index', compact("glasswares"));
+        return view('glasswares.index', compact("glasswares"));
     }
 
     /**
