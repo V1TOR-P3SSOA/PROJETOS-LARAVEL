@@ -11,7 +11,8 @@
     <p><i>"A organização é a base da ciência..."</i></p>
 
     <h1>VIDRARIAS</h1>
-    <table>
+    <a href="{{ route('glasswares.create') }}">Adicionar nova vidraria</a>
+    <table id="tabela_vidrarias">
         <tr>
             <td>NOME</td>
             <td>LOTE</td>
