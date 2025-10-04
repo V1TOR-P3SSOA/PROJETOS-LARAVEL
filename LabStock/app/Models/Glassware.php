@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Glassware extends Model
 {
-    
+    protected $fillable = ['name', 'type', 'capacity', 'quantity', 'batch', 'notes'];
 }
