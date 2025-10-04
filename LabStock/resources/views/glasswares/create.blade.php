@@ -25,7 +25,7 @@
         <input type="number" id="batch" name="batch"><br>
 
         <label for="notes">Notas:</label>
-        <input type="number" id="notes" name="notes"><br>
+        <input type="text" id="notes" name="notes"><br>
 
         <br>
         <button type="submit">Cadastrar</button>
